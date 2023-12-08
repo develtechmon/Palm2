@@ -14,7 +14,7 @@ import pprint
 from langchain.embeddings import GooglePalmEmbeddings
 from langchain.llms import GooglePalm
 
-os.environ['GOOGLE_API_KEY'] = "AIzaSyCqeMc0E7WcuMmRHotLGfuIDdS-TT5zTso"
+os.environ['GOOGLE_API_KEY'] = "AIzaSyBsn_mFQOSQ5EqkDgfHo5gCDsFuyhqeVAo"
 
 """
 Here, the instructions is part of the system prompt

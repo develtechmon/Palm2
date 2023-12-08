@@ -15,11 +15,12 @@ import textwrap
 from langchain.embeddings import GooglePalmEmbeddings
 from langchain.llms import GooglePalm
 from streamlit_chat import message
+from time import sleep
 
 import warnings
 warnings.filterwarnings('ignore', category=UserWarning, message='TypedStorage is deprecated')
 
-os.environ['GOOGLE_API_KEY'] = "AIzaSyCqeMc0E7WcuMmRHotLGfuIDdS-TT5zTso"
+os.environ['GOOGLE_API_KEY'] = "AIzaSyBsn_mFQOSQ5EqkDgfHo5gCDsFuyhqeVAo"
 
 st.set_page_config(
     page_title="Wikipedia",
@@ -106,6 +107,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
             full_response=''
             for item in response:
                 full_response+=item
+                sleep(0.01)
                 placeholder.markdown(full_response)
             placeholder.markdown(full_response)
     message = {"role":"assistant", "content": full_response}
